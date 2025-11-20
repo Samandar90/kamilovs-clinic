@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kamilovs Clinic — Услуга</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ШРИФТЫ -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- ОБЩИЙ CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- СТРАНИЦА УСЛУГ (общий стиль внутренних страниц) -->
+    <link rel="stylesheet" href="css/pages/services.css" />
+    <!-- ДЕТАЛИ УСЛУГИ -->
+    <link rel="stylesheet" href="css/pages/service-detail.css" />
+  </head>
+  <body>
+    <!-- ===== ШАПКА ТА ЖЕ, ЧТО НА ДРУГИХ СТРАНИЦАХ ===== -->
+    <header
+      class="kc-header"
+      data-aos="fade-down"
+      data-aos-duration="700"
+      data-aos-easing="ease-out-cubic"
+    >
+      <div class="kc-header__inner">
+        <a href="index.html" class="kc-header__brand">
+          <img
+            src="images/Лого Camilovs‘ Полноцветный RGB.png"
+            alt="Kamilovs Clinic"
+            class="kc-header__logo"
+          />
+          <span class="kc-header__brand-text"></span>
+        </a>
+
+        <nav class="kc-header__nav" aria-label="Главное меню">
+          <ul class="kc-header__menu">
+            <li><a href="index.html" class="is-active">Главная</a></li>
+            <li><a href="#about">О клинике</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="doctors.html">Врачи</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="kc-header__actions">
+          <a href="tel:+998950884141" class="kc-header__phone">
+            +998 95 088 41 41
+          </a>
+
+          <button class="kc-header__cta" type="button" data-open-modal>
+            Записаться
+          </button>
+
+          <button
+            class="kc-header__burger"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Мобильное меню -->
+      <nav class="kc-header__mobile" aria-label="Мобильное меню">
+        <ul>
+          <li><a href="index.html" class="is-active">Главная</a></li>
+          <li><a href="#about">О клинике</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="#doctors">Врачи</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+          <li>
+            <a href="tel:+998950884141">Позвонить: +998 95 088 41 41</a>
+          </li>
+          <li>
+            <button class="kc-header__mobile-cta" type="button" data-open-modal>
+              Записаться
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- МОДАЛКА ЗАПИСИ -->
+    <div class="kc-modal" id="kc-booking-modal" aria-hidden="true">
+      <div class="kc-modal__backdrop" data-modal-close></div>
+
+      <div
+        class="kc-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        data-aos="zoom-in"
+        data-aos-duration="400"
+        data-aos-easing="ease-out-cubic"
+      >
+        <button
+          type="button"
+          class="kc-modal__close"
+          aria-label="Закрыть"
+          data-modal-close
+        >
+          ✕
+        </button>
+
+        <div class="kc-modal__head">
+          <img
+            src="images/Лого Camilovs‘ Полноцветный RGB.png"
+            alt="Kamilovs Clinic"
+            class="kc-modal__logo"
+          />
+          <h2 class="kc-modal__title">Записаться на приём</h2>
+          <p class="kc-modal__sub">
+            Оставьте контакты — администратор клиники перезвонит и подтвердит
+            время.
+          </p>
+        </div>
+
+        <form class="kc-modal__form" id="kc-booking-form">
+          <div class="kc-field">
+            <label class="kc-label" for="bk-name">Имя *</label>
+            <input
+              type="text"
+              id="bk-name"
+              name="name"
+              class="kc-input"
+              required
+            />
+          </div>
+
+          <div class="kc-field">
+            <label class="kc-label" for="bk-phone">Телефон *</label>
+            <input
+              type="tel"
+              id="bk-phone"
+              name="phone"
+              class="kc-input"
+              required
+            />
+          </div>
+
+          <div class="kc-field-row">
+            <div class="kc-field">
+              <label class="kc-label" for="bk-date">Дата</label>
+              <input type="date" id="bk-date" name="date" class="kc-input" />
+            </div>
+            <div class="kc-field">
+              <label class="kc-label" for="bk-time">Время</label>
+              <input type="time" id="bk-time" name="time" class="kc-input" />
+            </div>
+          </div>
+
+          <div class="kc-field">
+            <label class="kc-label" for="bk-service">Услуга</label>
+            <input
+              type="text"
+              id="bk-service"
+              name="service"
+              class="kc-input"
+              placeholder="Например: терапевт, УЗИ, анализы"
+            />
+          </div>
+
+          <div class="kc-field">
+            <label class="kc-label" for="bk-msg">Комментарий</label>
+            <textarea
+              id="bk-msg"
+              name="message"
+              rows="3"
+              class="kc-input"
+              placeholder="Удобное время, жалобы, пожелания"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="kc-btn">Отправить заявку</button>
+
+          <p class="kc-form-hint">
+            Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ УСЛУГИ ===== -->
+    <main class="kc-main kc-main--inner">
+      <!-- Хлебные крошки -->
+      <section
+        class="kc-breadcrumbs"
+        data-aos="fade-up"
+        data-aos-offset="80"
+        data-aos-duration="500"
+      >
+        <div class="kc-container kc-breadcrumbs__inner">
+          <a href="index.html">Главная</a>
+          <span>•</span>
+          <a href="services.html">Услуги</a>
+          <span>•</span>
+          <span id="breadcrumbServiceName">Услуга</span>
+        </div>
+      </section>
+
+      <!-- HERO блока услуги -->
+      <section
+        class="sd-hero"
+        data-aos="fade-up"
+        data-aos-offset="140"
+        data-aos-duration="700"
+        data-aos-easing="ease-out-cubic"
+      >
+        <div class="kc-container sd-hero__grid">
+          <div
+            class="sd-hero__main"
+            data-aos="fade-right"
+            data-aos-delay="60"
+            data-aos-duration="650"
+          >
+            <p class="sd-pill" id="serviceCategory">Категория</p>
+            <h1 class="sd-title" id="serviceTitle">Название услуги</h1>
+            <p class="sd-subtitle" id="serviceSubtitle">
+              Краткое описание услуги и её ключевое преимущество.
+            </p>
+
+            <div class="sd-tags" id="serviceTags"></div>
+
+            <div class="sd-meta">
+              <div class="sd-meta__item">
+                <span class="sd-meta__label">Продолжительность</span>
+                <span class="sd-meta__value" id="serviceDuration">
+                  30–60 минут
+                </span>
+              </div>
+              <div class="sd-meta__item">
+                <span class="sd-meta__label">Стоимость</span>
+                <span class="sd-meta__value" id="servicePriceRange">
+                  от 180 000 сум
+                </span>
+              </div>
+            </div>
+
+            <div class="sd-hero__actions">
+              <button
+                class="sd-btn sd-btn--primary"
+                type="button"
+                data-open-modal
+              >
+                Записаться на приём
+              </button>
+              <button class="sd-btn sd-btn--ghost" id="scrollToDetails">
+                Подробнее об услуге
+              </button>
+            </div>
+          </div>
+
+          <aside
+            class="sd-hero__aside"
+            data-aos="fade-left"
+            data-aos-delay="120"
+            data-aos-duration="650"
+          >
+            <div class="sd-doctor" id="serviceDoctorCard"></div>
+            <div class="sd-note">
+              <h4>Важно</h4>
+              <p id="serviceImportantNote">
+                Перед процедурой необходима консультация профильного врача
+                клиники.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Описание + показания -->
+      <section
+        class="sd-section"
+        id="details"
+        data-aos="fade-up"
+        data-aos-offset="160"
+        data-aos-duration="650"
+      >
+        <div class="kc-container sd-section__grid">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="40"
+            data-aos-duration="600"
+          >
+            <h2 class="sd-h2">О процедуре</h2>
+            <p class="sd-text" id="serviceDescription">
+              Подробное описание услуги. Текст подставляется динамически в
+              зависимости от выбранного направления.
+            </p>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="80"
+            data-aos-duration="600"
+          >
+            <h3 class="sd-h3">Показания</h3>
+            <ul class="sd-list" id="serviceIndications"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Этапы -->
+      <section
+        class="sd-section"
+        data-aos="fade-up"
+        data-aos-offset="170"
+        data-aos-duration="650"
+      >
+        <div class="kc-container">
+          <h2 class="sd-h2">Как проходит приём / процедура</h2>
+          <ol class="sd-steps" id="serviceSteps"></ol>
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+      <section
+        class="sd-section"
+        data-aos="fade-up"
+        data-aos-offset="170"
+        data-aos-duration="650"
+      >
+        <div class="kc-container">
+          <h2 class="sd-h2">Почему пациенты выбирают Kamilovs Clinic</h2>
+          <div class="sd-benefits" id="serviceBenefits"></div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section
+        class="sd-section"
+        data-aos="fade-up"
+        data-aos-offset="170"
+        data-aos-duration="650"
+      >
+        <div class="kc-container">
+          <h2 class="sd-h2">Частые вопросы</h2>
+          <div class="sd-faq" id="serviceFaq"></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="sd-cta"
+        data-aos="fade-up"
+        data-aos-offset="190"
+        data-aos-duration="700"
+      >
+        <div class="kc-container sd-cta__box">
+          <div>
+            <h2 class="sd-cta__title">Готовы записаться на приём?</h2>
+            <p class="sd-cta__text">
+              Оставьте заявку онлайн или позвоните — администратор подберёт
+              удобное время и врача.
+            </p>
+          </div>
+          <div class="sd-cta__actions">
+            <button
+              class="sd-btn sd-btn--primary"
+              type="button"
+              data-open-modal
+            >
+              Онлайн-запись
+            </button>
+            <a href="tel:+998950884141" class="sd-btn sd-btn--outline">
+              +998 (95) 088 41 41
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer
+      class="kc-footer"
+      id="contacts"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="650"
+    >
+      <div class="kc-footer__waves" aria-hidden="true"></div>
+
+      <div class="kc-footer__inner">
+        <div class="kc-footer__col kc-footer__col--brand">
+          <div class="kc-footer__logo-wrap">
+            <img
+              src="images/Лого Camilovs‘ Полноцветный RGB.png"
+              alt="Kamilovs Clinic"
+              class="kc-footer__logo"
+            />
+          </div>
+
+          <p class="kc-footer__text">
+            Современная многопрофильная клиника в центре Ташкента. Работаем 24/7
+            — рядом, когда это важно.
+          </p>
+
+          <ul class="kc-footer__list">
+            <li>📍 ул. Хувайдо, 7, Ташкент</li>
+            <li>
+              📞
+              <a href="tel:+998950884141">+998 95 088 41 41</a>
+            </li>
+            <li>
+              ✉️
+              <a href="mailto:info@kamilovs.uz">info@kamilovs.uz</a>
+            </li>
+            <li>🕒 Работаем круглосуточно</li>
+          </ul>
+
+          <button class="kc-footer__cta" type="button" data-open-modal>
+            Записаться
+          </button>
+        </div>
+
+        <div class="kc-footer__col kc-footer__col--map">
+          <h3 class="kc-footer__map-title">Как нас найти</h3>
+          <p class="kc-footer__map-text">
+            Kamilovs’ clinic на Яндекс Картах — построить удобный маршрут за
+            пару секунд.
+          </p>
+          <div class="kc-map-wrapper">
+            <iframe
+              src="https://yandex.uz/map-widget/v1/org/66518861972/?ll=69.203739%2C41.342219&z=17"
+              frameborder="0"
+              allowfullscreen="true"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="kc-footer__bottom">
+        <span>© <span id="kc-year"></span> Kamilovs Clinic.</span>
+        <span>Сайт создан с заботой о пациентах.</span>
+      </div>
+
+      <button class="kc-to-top" type="button" aria-label="Наверх">↑</button>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/service-detail.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 650,
+        offset: 120,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>
