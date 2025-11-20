@@ -1,3 +1,6 @@
+// js/main.js
+
+// ===== REVEAL-Анимации по data-reveal =====
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll("[data-reveal]");
   if (!items.length) return;
@@ -22,9 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ===== HOME SERVICES SLIDER (index) =====
+// ===== HOME SERVICES SLIDER (главная) =====
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("home-services");
+  // пытаемся найти секцию услуг на главной
+  const root =
+    document.getElementById("home-services") ||
+    document.querySelector(".kc-hero + .kc-hs");
+
   if (!root) return;
 
   const media = root.querySelector(".kc-hs__media");
@@ -33,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = root.querySelector(".kc-hs__nav--next");
   const dotsWrap = root.querySelector(".kc-hs__dots");
 
-  if (!slides.length) return;
+  // если чего-то важного нет — вообще не запускаем слайдер
+  if (!media || !dotsWrap || !slides.length) return;
 
   let index = 0;
   let autoTimer = null;
@@ -43,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   slides.forEach((_, i) => {
     const dot = document.createElement("button");
     dot.type = "button";
+    dot.className = "kc-hs__dot";
     dot.setAttribute("aria-label", `Слайд ${i + 1}`);
     dot.addEventListener("click", () => goTo(i));
     dotsWrap.appendChild(dot);
@@ -51,16 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = Array.from(dotsWrap.querySelectorAll("button"));
 
   function update() {
-    slides.forEach((s, i) =>
-      s.classList.toggle("is-active", i === index)
-    );
-    dots.forEach((d, i) =>
-      d.setAttribute("aria-current", i === index ? "true" : "false")
-    );
+    slides.forEach((s, i) => {
+      s.classList.toggle("is-active", i === index);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle("is-active", i === index);
+      d.setAttribute("aria-current", i === index ? "true" : "false");
+    });
   }
 
   function goTo(i) {
-    const max = slides.length - 1;
     index = (i + slides.length) % slides.length;
     update();
   }
@@ -72,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     goTo(index - 1);
   }
 
-  prevBtn && prevBtn.addEventListener("click", prev);
-  nextBtn && nextBtn.addEventListener("click", next);
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+  if (nextBtn) nextBtn.addEventListener("click", next);
 
   // авто-прокрутка каждые 4 секунды
   function startAuto() {
@@ -100,11 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true }
   );
 
-  // простой клик по "play" — пока просто открываем YouTube, можно поменять ссылку
+  // клик по play-кнопке
   media.addEventListener("click", (e) => {
     const play = e.target.closest(".kc-hs__play");
     if (!play) return;
-    // здесь можно сделать свою ссылку или модалку
     window.open(
       "https://www.youtube.com/results?search_query=kamilovs+clinic",
       "_blank"
@@ -116,13 +124,17 @@ document.addEventListener("DOMContentLoaded", () => {
   startAuto();
 });
 
+// ===== (СТАРЫЙ) DOCTORS-TRACK — ТЕПЕРЬ БЕЗОПАСНО И НЕ ЛОМАЕТСЯ =====
 document.addEventListener("DOMContentLoaded", () => {
   const docsSection = document.querySelector(".kc-docs");
   if (!docsSection) return;
 
   const track = docsSection.querySelector(".kc-docs__track");
-  const cards = Array.from(track.querySelectorAll(".kc-docs__card"));
+  // В новой вёрстке трека нет (есть kc-docs__viewport / kc-docs__list),
+  // этим блоком можно не пользоваться — просто выходим, чтобы не было ошибки.
+  if (!track) return;
 
+  const cards = Array.from(track.querySelectorAll(".kc-docs__card"));
   if (!cards.length) return;
 
   const GROUP = 3;
@@ -154,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function resetForMobile() {
-    // на мобилке показываем все карточки, без групп
     cards.forEach((card) => {
       card.style.opacity = "";
       card.style.pointerEvents = "";
@@ -181,7 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // включаем / выключаем в зависимости от ширины
   function handleResize() {
     if (isDesktop()) {
       startAuto();
@@ -191,35 +201,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  window.addEventListener("resize", () => {
-    // небольшая задержка, чтобы не дёргалось
-    clearTimeout(handleResize._t);
-    handleResize._t = setTimeout(handleResize, 150);
-  });
+  window.addEventListener(
+    "resize",
+    () => {
+      clearTimeout(handleResize._t);
+      handleResize._t = setTimeout(handleResize, 150);
+    }
+  );
 
-  // ==== лёгкий 3D-parallax при скролле ====
   const parallaxCards = cards;
   function updateParallax() {
     const vh = window.innerHeight;
     parallaxCards.forEach((card, i) => {
       const rect = card.getBoundingClientRect();
       const center = rect.top + rect.height / 2;
-      const dist = (center - vh / 2) / vh; // -0.5…0.5
-      const depth = (i % GROUP) - 1; // -1,0,1 внутри группы
-      const shift = dist * 18 + depth * 4; // пиксели
+      const dist = (center - vh / 2) / vh;
+      const depth = (i % GROUP) - 1;
+      const shift = dist * 18 + depth * 4;
       card.style.setProperty("--shift-y", shift.toFixed(1) + "px");
     });
   }
 
-  window.addEventListener("scroll", () => {
-    window.requestAnimationFrame(updateParallax);
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      window.requestAnimationFrame(updateParallax);
+    },
+    { passive: true }
+  );
 
-  // начальная инициализация
   handleResize();
   updateParallax();
 });
-
 
 // ===== FOOTER: год + кнопка "наверх" =====
 document.addEventListener("DOMContentLoaded", () => {
@@ -246,4 +259,3 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
-

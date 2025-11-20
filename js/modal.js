@@ -1,40 +1,33 @@
-// modal.js
+// js/modal.js
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("kc-booking-modal");
   if (!modal) return;
 
   const openButtons = document.querySelectorAll("[data-open-modal]");
   const closeButtons = modal.querySelectorAll("[data-modal-close]");
-  const backdrop = modal.querySelector(".kc-modal__backdrop");
-  const form = modal.querySelector("#kc-booking-form");
+  const dialog = modal.querySelector(".kc-modal__dialog");
 
-  let lastFocused = null;
-
-  function openModal(e) {
-    if (e) e.preventDefault();
-    lastFocused = document.activeElement;
-
+  function openModal() {
+    modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
-    document.documentElement.style.overflow = "hidden";
-
-    const first = modal.querySelector("input, textarea, button");
-    if (first) setTimeout(() => first.focus(), 50);
+    document.body.classList.add("kc-body-locked");
   }
 
   function closeModal() {
+    modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
-    document.documentElement.style.overflow = "";
-    if (lastFocused && typeof lastFocused.focus === "function") {
-      lastFocused.focus();
-    }
+    document.body.classList.remove("kc-body-locked");
   }
 
-  // Открытие (все кнопки с data-open-modal)
+  // Открытие по кнопкам с data-open-modal
   openButtons.forEach((btn) => {
-    btn.addEventListener("click", openModal);
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
   });
 
-  // Закрытие по крестикам
+  // Закрытие по кнопкам / фону
   closeButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -42,27 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Закрытие по клику на фон
-  if (backdrop) {
-    backdrop.addEventListener("click", () => {
-      closeModal();
-    });
-  }
-
-  // Закрытие по Esc
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
+  // Клик по фону (backdrop)
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal || e.target.hasAttribute("data-modal-close")) {
       closeModal();
     }
   });
 
-  // Временная отправка формы (без Telegram)
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("✅ Заявка отправлена! (позже подключим Telegram)");
-      form.reset();
+  // ESC для закрытия
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
-    });
-  }
+    }
+  });
 });
