@@ -11,21 +11,10 @@
     <link rel="stylesheet" href="css/pages/index.css" />
     <!-- Новые стили страницы врачей -->
     <link rel="stylesheet" href="css/pages/doctors.css" />
-
-    <!-- AOS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-    />
   </head>
   <body>
     <!-- ===== ШАПКА ===== -->
-    <header
-      class="kc-header"
-      data-aos="fade-down"
-      data-aos-duration="700"
-      data-aos-easing="ease-out-cubic"
-    >
+    <header class="kc-header" data-reveal>
       <div class="kc-header__inner">
         <a href="index.html" class="kc-header__brand">
           <img
@@ -68,11 +57,11 @@
       <!-- Мобильное меню -->
       <nav class="kc-header__mobile" aria-label="Мобильное меню">
         <ul>
-          <li><a href="index.html" class="is-active">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#about">О клинике</a></li>
           <li><a href="services.html">Услуги</a></li>
-          <li><a href="#doctors">Врачи</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="doctors.html" class="is-active">Врачи</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
           <li>
             <a href="tel:+998950884141">Позвонить: +998 95 088 41 41</a>
           </li>
@@ -87,19 +76,9 @@
 
     <main class="kc-main kc-main--inner">
       <!-- HERO страницы врачей -->
-      <section
-        class="kc-docs-page-hero"
-        data-aos="fade-up"
-        data-aos-offset="120"
-        data-aos-duration="700"
-      >
+      <section class="kc-docs-page-hero" data-reveal>
         <div class="kc-docs-page-hero__inner">
-          <div
-            class="kc-docs-page-hero__text"
-            data-aos="fade-right"
-            data-aos-delay="40"
-            data-aos-duration="650"
-          >
+          <div class="kc-docs-page-hero__text" data-reveal>
             <span class="kc-docs-page-hero__kicker">КОМАНДА ЭКСПЕРТОВ</span>
             <h1 class="kc-docs-page-hero__title">Врачи Kamilovs Clinic</h1>
             <p class="kc-docs-page-hero__lead">
@@ -112,7 +91,7 @@
               приёма.
             </p>
 
-            <div class="kc-docs-page-hero__cta">
+            <div class="kc-docs-page-hero__cta" data-reveal>
               <button class="kc-docs-page-hero__btn" data-open-modal>
                 Записаться к врачу
               </button>
@@ -122,12 +101,7 @@
             </div>
           </div>
 
-          <div
-            class="kc-docs-page-hero__card"
-            data-aos="fade-left"
-            data-aos-delay="80"
-            data-aos-duration="650"
-          >
+          <div class="kc-docs-page-hero__card" data-reveal>
             <p class="kc-docs-page-hero__card-title">Популярные направления</p>
             <ul class="kc-docs-page-hero__card-list">
               <li>Неврология и терапия</li>
@@ -145,12 +119,7 @@
       </section>
 
       <!-- Фильтр по направлениям -->
-      <section
-        class="kc-docs-page-filter"
-        data-aos="fade-up"
-        data-aos-offset="140"
-        data-aos-duration="600"
-      >
+      <section class="kc-docs-page-filter" data-reveal>
         <div class="kc-docs-page-filter__inner">
           <p class="kc-docs-page-filter__label">Фильтр по направлениям:</p>
           <div class="kc-docs-page-filter__buttons">
@@ -168,22 +137,11 @@
       </section>
 
       <!-- Сетка врачей -->
-      <section
-        class="kc-docs-page-grid"
-        data-aos="fade-up"
-        data-aos-offset="150"
-        data-aos-duration="650"
-      >
+      <section class="kc-docs-page-grid" data-reveal>
         <div class="kc-docs-page-grid__inner">
           <ul class="kc-docs-page-grid__list">
             <!-- 1 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="neuro"
-              data-aos="fade-up"
-              data-aos-delay="40"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="neuro" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/doctor_01.jpg"
@@ -206,13 +164,7 @@
             </li>
 
             <!-- 2 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="stom"
-              data-aos="fade-up"
-              data-aos-delay="80"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="stom" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/doctor_02.jpg"
@@ -235,13 +187,7 @@
             </li>
 
             <!-- 3 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="uzd"
-              data-aos="fade-up"
-              data-aos-delay="120"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="uzd" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/doctor_03.jpg"
@@ -262,13 +208,7 @@
             </li>
 
             <!-- 4 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="pediatrics"
-              data-aos="fade-up"
-              data-aos-delay="160"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="pediatrics" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/clinic_01.jpg"
@@ -291,13 +231,7 @@
             </li>
 
             <!-- 5 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="therapy"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="therapy" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/clinic_02.jpg"
@@ -318,13 +252,7 @@
             </li>
 
             <!-- 6 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="cardio"
-              data-aos="fade-up"
-              data-aos-delay="240"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="cardio" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/clinic_03.jpg"
@@ -347,13 +275,7 @@
             </li>
 
             <!-- 7 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="gyno"
-              data-aos="fade-up"
-              data-aos-delay="280"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="gyno" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/clinic_04.jpg"
@@ -376,13 +298,7 @@
             </li>
 
             <!-- 8 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="ent"
-              data-aos="fade-up"
-              data-aos-delay="320"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="ent" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/clinic_05.jpg"
@@ -403,13 +319,7 @@
             </li>
 
             <!-- 9 -->
-            <li
-              class="kc-docs__card"
-              data-doc-spec="therapy"
-              data-aos="fade-up"
-              data-aos-delay="360"
-              data-aos-duration="600"
-            >
+            <li class="kc-docs__card" data-doc-spec="therapy" data-reveal>
               <div class="kc-docs__media">
                 <img
                   src="images/doctor_03.jpg"
@@ -433,12 +343,7 @@
       </section>
 
       <!-- Мини-блок с CTA -->
-      <section
-        class="kc-docs-page-cta"
-        data-aos="fade-up"
-        data-aos-offset="170"
-        data-aos-duration="650"
-      >
+      <section class="kc-docs-page-cta" data-reveal>
         <div class="kc-docs-page-cta__inner">
           <div class="kc-docs-page-cta__text">
             <h2>Не знаете, к кому записаться?</h2>
@@ -447,7 +352,7 @@
               жалобы и порекомендует специалиста.
             </p>
           </div>
-          <div class="kc-docs-page-cta__actions">
+          <div class="kc-docs-page-cta__actions" data-reveal>
             <button class="kc-docs-page-cta__btn" data-open-modal>
               Записаться онлайн
             </button>
@@ -460,13 +365,7 @@
     </main>
 
     <!-- ===== ФУТЕР ===== -->
-    <footer
-      class="kc-footer"
-      id="contacts"
-      data-aos="fade-up"
-      data-aos-offset="180"
-      data-aos-duration="650"
-    >
+    <footer class="kc-footer" id="contacts" data-reveal>
       <div class="kc-footer__waves" aria-hidden="true"></div>
 
       <div class="kc-footer__inner">
@@ -531,14 +430,7 @@
     <div class="kc-modal" id="kc-booking-modal" aria-hidden="true">
       <div class="kc-modal__backdrop" data-modal-close></div>
 
-      <div
-        class="kc-modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-easing="ease-out-cubic"
-      >
+      <div class="kc-modal__dialog" role="dialog" aria-modal="true" data-reveal>
         <button
           type="button"
           class="kc-modal__close"
@@ -627,18 +519,10 @@
     </div>
 
     <!-- Скрипты -->
+    <script src="js/reveal.js"></script>
     <script src="js/header.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/doctors-page.js"></script>
     <script src="js/forms.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 650,
-        offset: 120,
-        easing: "ease-out-cubic",
-      });
-    </script>
   </body>
 </html>

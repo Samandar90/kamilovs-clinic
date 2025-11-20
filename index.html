@@ -5,19 +5,13 @@
     <title>Kamilovs Clinic — многопрофильная клиника</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- AOS CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-    />
-
     <!-- Стили -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/pages/index.css" />
   </head>
   <body>
     <!-- ===== ШАПКА ===== -->
-    <header class="kc-header" data-aos="fade-down" data-aos-duration="700">
+    <header class="kc-header" data-reveal>
       <div class="kc-header__inner">
         <a href="index.html" class="kc-header__brand">
           <img
@@ -64,8 +58,8 @@
           <li><a href="index.html" class="is-active">Главная</a></li>
           <li><a href="#about">О клинике</a></li>
           <li><a href="services.html">Услуги</a></li>
-          <li><a href="#doctors">Врачи</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
           <li>
             <a href="tel:+998950884141">Позвонить: +998 95 088 41 41</a>
           </li>
@@ -81,17 +75,12 @@
     <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
     <main class="kc-main">
       <!-- HERO -->
-      <section
-        id="kc-hero"
-        class="kc-hero"
-        data-aos="fade-up"
-        data-aos-duration="900"
-      >
+      <section id="kc-hero" class="kc-hero" data-reveal>
         <div class="kc-hero-bg"></div>
         <div class="kc-hero-overlay"></div>
 
         <div class="kc-hero-container">
-          <div class="kc-hero-logo" data-reveal data-aos="zoom-in">
+          <div class="kc-hero-logo" data-reveal>
             <img
               src="images/Лого Camilovs‘ Полноцветный RGB.png"
               alt="Kamilovs Clinic"
@@ -100,41 +89,21 @@
             <span class="kc-hero-ring" aria-hidden="true"></span>
           </div>
 
-          <div
-            class="kc-hero-badge"
-            data-reveal
-            data-aos="fade-up"
-            data-aos-delay="80"
-          >
+          <div class="kc-hero-badge" data-reveal>
             <span class="kc-hero-badge__dot"></span>
             Работаем <strong>24/7</strong> без выходных
           </div>
 
-          <h1
-            class="kc-hero-title"
-            data-reveal
-            data-aos="fade-up"
-            data-aos-delay="140"
-          >
+          <h1 class="kc-hero-title" data-reveal>
             <span class="kc-hero-title-line">Добро пожаловать в</span>
             <span class="kc-hero-title-line kc-gradient">Kamilovs Clinic</span>
           </h1>
 
-          <p
-            class="kc-hero-sub"
-            data-reveal
-            data-aos="fade-up"
-            data-aos-delay="220"
-          >
+          <p class="kc-hero-sub" data-reveal>
             Современная диагностика и внимательный уход для каждого пациента.
           </p>
 
-          <div
-            class="kc-hero-cta"
-            data-reveal
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
+          <div class="kc-hero-cta" data-reveal>
             <a href="services.html" class="kc-hero-btn kc-hero-btn-primary">
               Наши услуги
             </a>
@@ -148,11 +117,7 @@
           </div>
 
           <div class="kc-hero-features" data-reveal>
-            <article
-              class="kc-card"
-              data-aos="fade-up"
-              data-aos-delay="120"
-            >
+            <article class="kc-card" data-reveal>
               <div class="kc-card-ico">🚑</div>
               <h3 class="kc-card-title">Экстренная помощь</h3>
               <p class="kc-card-text">
@@ -161,11 +126,7 @@
               </p>
             </article>
 
-            <article
-              class="kc-card kc-card--center kc-card-247b"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
+            <article class="kc-card kc-card--center kc-card-247b" data-reveal>
               <div class="kc-card-247b-icon">
                 <span>24/7</span>
               </div>
@@ -176,11 +137,7 @@
               </p>
             </article>
 
-            <article
-              class="kc-card"
-              data-aos="fade-up"
-              data-aos-delay="280"
-            >
+            <article class="kc-card" data-reveal>
               <div class="kc-card-ico">🏥</div>
               <h3 class="kc-card-title">Расписание клиники</h3>
               <p class="kc-card-text">
@@ -192,18 +149,9 @@
       </section>
 
       <!-- УСЛУГИ -->
-      <section
-        id="services"
-        class="kc-hs"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
+      <section id="services" class="kc-hs" data-reveal>
         <div class="kc-hs__inner">
-          <div
-            class="kc-hs__text"
-            data-aos="fade-right"
-            data-aos-delay="60"
-          >
+          <div class="kc-hs__text" data-reveal>
             <span class="kc-hs__kicker">ЧТО МЫ ДЕЛАЕМ</span>
             <h2 class="kc-hs__title">Услуги клиники</h2>
             <p class="kc-hs__lead">
@@ -218,11 +166,7 @@
             <a href="services.html" class="kc-hs__btn">Подробнее об услугах</a>
           </div>
 
-          <div
-            class="kc-hs__media"
-            data-aos="fade-left"
-            data-aos-delay="140"
-          >
+          <div class="kc-hs__media" data-reveal>
             <div class="kc-hs__slide is-active">
               <figure class="kc-hs__figure">
                 <img
@@ -310,18 +254,9 @@
       </section>
 
       <!-- ПРЕИМУЩЕСТВА -->
-      <section
-        id="benefits"
-        class="kc-benefits"
-        data-aos="fade-up"
-        data-aos-offset="220"
-      >
+      <section id="benefits" class="kc-benefits" data-reveal>
         <div class="kc-benefits__inner">
-          <header
-            class="kc-benefits__head"
-            data-aos="fade-up"
-            data-aos-delay="40"
-          >
+          <header class="kc-benefits__head" data-reveal>
             <span class="kc-benefits__kicker">Почему выбирают нас</span>
             <h2 class="kc-benefits__title">Преимущества Kamilovs Clinic</h2>
             <p class="kc-benefits__lead">
@@ -332,11 +267,7 @@
           </header>
 
           <div class="kc-benefits__grid">
-            <article
-              class="kc-benefits__item"
-              data-aos="zoom-in"
-              data-aos-delay="60"
-            >
+            <article class="kc-benefits__item" data-reveal>
               <div class="kc-benefits__icon">
                 <span>🩺</span>
               </div>
@@ -348,11 +279,7 @@
               <span class="kc-benefits__tag">Персональный подход</span>
             </article>
 
-            <article
-              class="kc-benefits__item"
-              data-aos="zoom-in"
-              data-aos-delay="120"
-            >
+            <article class="kc-benefits__item" data-reveal>
               <div class="kc-benefits__icon kc-benefits__icon--blue">
                 <span>💻</span>
               </div>
@@ -364,11 +291,7 @@
               <span class="kc-benefits__tag">Точность результатов</span>
             </article>
 
-            <article
-              class="kc-benefits__item"
-              data-aos="zoom-in"
-              data-aos-delay="180"
-            >
+            <article class="kc-benefits__item" data-reveal>
               <div class="kc-benefits__icon kc-benefits__icon--green">
                 <span>⏱</span>
               </div>
@@ -380,11 +303,7 @@
               <span class="kc-benefits__tag">Удобное расписание</span>
             </article>
 
-            <article
-              class="kc-benefits__item"
-              data-aos="zoom-in"
-              data-aos-delay="240"
-            >
+            <article class="kc-benefits__item" data-reveal>
               <div class="kc-benefits__icon kc-benefits__icon--purple">
                 <span>🏥</span>
               </div>
@@ -396,11 +315,7 @@
               <span class="kc-benefits__tag">Комфорт пациента</span>
             </article>
 
-            <article
-              class="kc-benefits__item"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
+            <article class="kc-benefits__item" data-reveal>
               <div class="kc-benefits__icon kc-benefits__icon--cyan">
                 <span>📲</span>
               </div>
@@ -412,11 +327,7 @@
               <span class="kc-benefits__tag">Поддержка 24/7</span>
             </article>
 
-            <article
-              class="kc-benefits__item"
-              data-aos="zoom-in"
-              data-aos-delay="360"
-            >
+            <article class="kc-benefits__item" data-reveal>
               <div class="kc-benefits__icon kc-benefits__icon--gold">
                 <span>💳</span>
               </div>
@@ -432,18 +343,9 @@
       </section>
 
       <!-- FAQ -->
-      <section
-        id="faq"
-        class="kc-faq"
-        data-aos="fade-up"
-        data-aos-offset="220"
-      >
+      <section id="faq" class="kc-faq" data-reveal>
         <div class="kc-faq__inner">
-          <header
-            class="kc-faq__head"
-            data-aos="fade-up"
-            data-aos-delay="40"
-          >
+          <header class="kc-faq__head" data-reveal>
             <span class="kc-faq__kicker">FAQ</span>
             <h2 class="kc-faq__title">Частые вопросы пациентов</h2>
             <p class="kc-faq__lead">
@@ -453,12 +355,7 @@
           </header>
 
           <div class="kc-faq__layout">
-            <aside
-              class="kc-faq__aside"
-              data-faq-reveal
-              data-aos="fade-right"
-              data-aos-delay="80"
-            >
+            <aside class="kc-faq__aside" data-faq-reveal data-reveal>
               <h3 class="kc-faq__aside-title">Перед визитом</h3>
               <p class="kc-faq__aside-text">
                 Если вы не нашли ответ на свой вопрос — просто позвоните нам,
@@ -483,12 +380,7 @@
               </a>
             </aside>
 
-            <div
-              class="kc-faq__accordion"
-              data-faq-reveal
-              data-aos="fade-left"
-              data-aos-delay="140"
-            >
+            <div class="kc-faq__accordion" data-faq-reveal data-reveal>
               <article class="kc-faq__item is-open">
                 <button
                   class="kc-faq__question"
@@ -592,18 +484,9 @@
       </section>
 
       <!-- ВРАЧИ -->
-      <section
-        id="doctors"
-        class="kc-docs"
-        data-aos="fade-up"
-        data-aos-offset="220"
-      >
+      <section id="doctors" class="kc-docs" data-reveal>
         <div class="kc-docs__inner">
-          <div
-            class="kc-docs__head"
-            data-aos="fade-up"
-            data-aos-delay="40"
-          >
+          <div class="kc-docs__head" data-reveal>
             <img
               src="images/Лого Camilovs‘ Полноцветный RGB.png"
               alt="Kamilovs Clinic"
@@ -618,19 +501,10 @@
             </p>
           </div>
 
-          <div
-            class="kc-docs__viewport"
-            data-aos="fade-up"
-            data-aos-delay="120"
-          >
-            <!-- ВАЖНО: ОДИН список .kc-docs__list, в котором 9 карточек -->
+          <div class="kc-docs__viewport" data-reveal>
             <ul class="kc-docs__list">
               <!-- 1 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="60"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/doctor_01.jpg"
@@ -653,11 +527,7 @@
               </li>
 
               <!-- 2 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/doctor_02.jpg"
@@ -680,11 +550,7 @@
               </li>
 
               <!-- 3 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="140"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/doctor_03.jpg"
@@ -707,11 +573,7 @@
               </li>
 
               <!-- 4 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="180"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/clinic_01.jpg"
@@ -734,11 +596,7 @@
               </li>
 
               <!-- 5 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="220"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/clinic_02.jpg"
@@ -761,11 +619,7 @@
               </li>
 
               <!-- 6 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="260"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/clinic_03.jpg"
@@ -788,11 +642,7 @@
               </li>
 
               <!-- 7 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/doctor_01.jpg"
@@ -815,11 +665,7 @@
               </li>
 
               <!-- 8 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="340"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/doctor_02.jpg"
@@ -842,11 +688,7 @@
               </li>
 
               <!-- 9 -->
-              <li
-                class="kc-docs__card"
-                data-aos="fade-up"
-                data-aos-delay="380"
-              >
+              <li class="kc-docs__card" data-reveal>
                 <div class="kc-docs__media">
                   <img
                     src="images/doctor_03.jpg"
@@ -872,8 +714,7 @@
           <div
             class="kc-docs__more"
             style="justify-content: center;  display: flex; margin-top: 30px;"
-            data-aos="fade-up"
-            data-aos-delay="420"
+            data-reveal
           >
             <a href="doctors.html" class="kc-hs__btn">Смотреть всех врачей</a>
           </div>
@@ -881,18 +722,9 @@
       </section>
 
       <!-- О КЛИНИКЕ / ПОЧЕМУ МЫ -->
-      <section
-        id="about"
-        class="kc-why"
-        data-aos="fade-up"
-        data-aos-offset="220"
-      >
+      <section id="about" class="kc-why" data-reveal>
         <div class="kc-why__inner">
-          <div
-            class="kc-why__text"
-            data-aos="fade-right"
-            data-aos-delay="60"
-          >
+          <div class="kc-why__text" data-reveal>
             <span class="kc-why__kicker">Почему нас выбирают</span>
             <h2 class="kc-why__title">Забота, технологии и доверие</h2>
             <p class="kc-why__lead">
@@ -906,11 +738,7 @@
             </p>
           </div>
 
-          <div
-            class="kc-why__grid"
-            data-aos="fade-left"
-            data-aos-delay="140"
-          >
+          <div class="kc-why__grid" data-reveal>
             <article class="kc-why__item">
               <div class="kc-why__value">24/7</div>
               <h3 class="kc-why__item-title">Круглосуточная работа</h3>
@@ -951,18 +779,9 @@
       </section>
 
       <!-- КАК ПРОХОДИТ ПРИЁМ -->
-      <section
-        id="flow"
-        class="kc-flow"
-        data-aos="fade-up"
-        data-aos-offset="220"
-      >
+      <section id="flow" class="kc-flow" data-reveal>
         <div class="kc-flow__inner">
-          <div
-            class="kc-flow__text"
-            data-aos="fade-right"
-            data-aos-delay="60"
-          >
+          <div class="kc-flow__text" data-reveal>
             <span class="kc-flow__kicker">ЭТАПЫ ОБСЛУЖИВАНИЯ</span>
             <h2 class="kc-flow__title">Как проходит приём в Kamilovs Clinic</h2>
             <p class="kc-flow__lead">
@@ -975,15 +794,8 @@
             </p>
           </div>
 
-          <div
-            class="kc-flow__steps"
-            aria-label="Как проходит приём"
-          >
-            <article
-              class="kc-flow__step"
-              data-aos="fade-up"
-              data-aos-delay="80"
-            >
+          <div class="kc-flow__steps" aria-label="Как проходит приём">
+            <article class="kc-flow__step" data-reveal>
               <div class="kc-flow__badge">
                 <span class="kc-flow__step-num">1</span>
               </div>
@@ -994,11 +806,7 @@
               </p>
             </article>
 
-            <article
-              class="kc-flow__step"
-              data-aos="fade-up"
-              data-aos-delay="140"
-            >
+            <article class="kc-flow__step" data-reveal>
               <div class="kc-flow__badge">
                 <span class="kc-flow__step-num">2</span>
               </div>
@@ -1009,11 +817,7 @@
               </p>
             </article>
 
-            <article
-              class="kc-flow__step"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
+            <article class="kc-flow__step" data-reveal>
               <div class="kc-flow__badge">
                 <span class="kc-flow__step-num">3</span>
               </div>
@@ -1024,11 +828,7 @@
               </p>
             </article>
 
-            <article
-              class="kc-flow__step"
-              data-aos="fade-up"
-              data-aos-delay="260"
-            >
+            <article class="kc-flow__step" data-reveal>
               <div class="kc-flow__badge">
                 <span class="kc-flow__step-num">4</span>
               </div>
@@ -1044,12 +844,7 @@
     </main>
 
     <!-- ===== ФУТЕР ===== -->
-    <footer
-      class="kc-footer"
-      id="contacts"
-      data-aos="fade-up"
-      data-aos-offset="220"
-    >
+    <footer class="kc-footer" id="contacts" data-reveal>
       <div class="kc-footer__waves" aria-hidden="true"></div>
 
       <div class="kc-footer__inner">
@@ -1202,18 +997,8 @@
       </div>
     </div>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 700,
-        offset: 120,
-        easing: "ease-out-cubic",
-      });
-    </script>
-
     <!-- Скрипты -->
+    <script src="js/reveal.js"></script>
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>

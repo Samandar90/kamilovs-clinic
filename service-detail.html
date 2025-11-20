@@ -11,9 +11,6 @@
       rel="stylesheet"
     />
 
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
     <!-- ОБЩИЙ CSS -->
     <link rel="stylesheet" href="css/base.css" />
     <!-- СТРАНИЦА УСЛУГ (общий стиль внутренних страниц) -->
@@ -23,12 +20,7 @@
   </head>
   <body>
     <!-- ===== ШАПКА ТА ЖЕ, ЧТО НА ДРУГИХ СТРАНИЦАХ ===== -->
-    <header
-      class="kc-header"
-      data-aos="fade-down"
-      data-aos-duration="700"
-      data-aos-easing="ease-out-cubic"
-    >
+    <header class="kc-header" data-reveal>
       <div class="kc-header__inner">
         <a href="index.html" class="kc-header__brand">
           <img
@@ -72,11 +64,11 @@
       <!-- Мобильное меню -->
       <nav class="kc-header__mobile" aria-label="Мобильное меню">
         <ul>
-          <li><a href="index.html" class="is-active">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#about">О клинике</a></li>
           <li><a href="services.html">Услуги</a></li>
-          <li><a href="#doctors">Врачи</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
           <li>
             <a href="tel:+998950884141">Позвонить: +998 95 088 41 41</a>
           </li>
@@ -93,14 +85,7 @@
     <div class="kc-modal" id="kc-booking-modal" aria-hidden="true">
       <div class="kc-modal__backdrop" data-modal-close></div>
 
-      <div
-        class="kc-modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-easing="ease-out-cubic"
-      >
+      <div class="kc-modal__dialog" role="dialog" aria-modal="true" data-reveal>
         <button
           type="button"
           class="kc-modal__close"
@@ -191,12 +176,7 @@
     <!-- ===== ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ УСЛУГИ ===== -->
     <main class="kc-main kc-main--inner">
       <!-- Хлебные крошки -->
-      <section
-        class="kc-breadcrumbs"
-        data-aos="fade-up"
-        data-aos-offset="80"
-        data-aos-duration="500"
-      >
+      <section class="kc-breadcrumbs" data-reveal>
         <div class="kc-container kc-breadcrumbs__inner">
           <a href="index.html">Главная</a>
           <span>•</span>
@@ -207,20 +187,9 @@
       </section>
 
       <!-- HERO блока услуги -->
-      <section
-        class="sd-hero"
-        data-aos="fade-up"
-        data-aos-offset="140"
-        data-aos-duration="700"
-        data-aos-easing="ease-out-cubic"
-      >
+      <section class="sd-hero" data-reveal>
         <div class="kc-container sd-hero__grid">
-          <div
-            class="sd-hero__main"
-            data-aos="fade-right"
-            data-aos-delay="60"
-            data-aos-duration="650"
-          >
+          <div class="sd-hero__main" data-reveal>
             <p class="sd-pill" id="serviceCategory">Категория</p>
             <h1 class="sd-title" id="serviceTitle">Название услуги</h1>
             <p class="sd-subtitle" id="serviceSubtitle">
@@ -244,7 +213,7 @@
               </div>
             </div>
 
-            <div class="sd-hero__actions">
+            <div class="sd-hero__actions" data-reveal>
               <button
                 class="sd-btn sd-btn--primary"
                 type="button"
@@ -258,12 +227,7 @@
             </div>
           </div>
 
-          <aside
-            class="sd-hero__aside"
-            data-aos="fade-left"
-            data-aos-delay="120"
-            data-aos-duration="650"
-          >
+          <aside class="sd-hero__aside" data-reveal>
             <div class="sd-doctor" id="serviceDoctorCard"></div>
             <div class="sd-note">
               <h4>Важно</h4>
@@ -277,30 +241,16 @@
       </section>
 
       <!-- Описание + показания -->
-      <section
-        class="sd-section"
-        id="details"
-        data-aos="fade-up"
-        data-aos-offset="160"
-        data-aos-duration="650"
-      >
+      <section class="sd-section" id="details" data-reveal>
         <div class="kc-container sd-section__grid">
-          <div
-            data-aos="fade-right"
-            data-aos-delay="40"
-            data-aos-duration="600"
-          >
+          <div data-reveal>
             <h2 class="sd-h2">О процедуре</h2>
             <p class="sd-text" id="serviceDescription">
               Подробное описание услуги. Текст подставляется динамически в
               зависимости от выбранного направления.
             </p>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-delay="80"
-            data-aos-duration="600"
-          >
+          <div data-reveal>
             <h3 class="sd-h3">Показания</h3>
             <ul class="sd-list" id="serviceIndications"></ul>
           </div>
@@ -308,12 +258,7 @@
       </section>
 
       <!-- Этапы -->
-      <section
-        class="sd-section"
-        data-aos="fade-up"
-        data-aos-offset="170"
-        data-aos-duration="650"
-      >
+      <section class="sd-section" data-reveal>
         <div class="kc-container">
           <h2 class="sd-h2">Как проходит приём / процедура</h2>
           <ol class="sd-steps" id="serviceSteps"></ol>
@@ -321,12 +266,7 @@
       </section>
 
       <!-- Преимущества -->
-      <section
-        class="sd-section"
-        data-aos="fade-up"
-        data-aos-offset="170"
-        data-aos-duration="650"
-      >
+      <section class="sd-section" data-reveal>
         <div class="kc-container">
           <h2 class="sd-h2">Почему пациенты выбирают Kamilovs Clinic</h2>
           <div class="sd-benefits" id="serviceBenefits"></div>
@@ -334,12 +274,7 @@
       </section>
 
       <!-- FAQ -->
-      <section
-        class="sd-section"
-        data-aos="fade-up"
-        data-aos-offset="170"
-        data-aos-duration="650"
-      >
+      <section class="sd-section" data-reveal>
         <div class="kc-container">
           <h2 class="sd-h2">Частые вопросы</h2>
           <div class="sd-faq" id="serviceFaq"></div>
@@ -347,12 +282,7 @@
       </section>
 
       <!-- CTA -->
-      <section
-        class="sd-cta"
-        data-aos="fade-up"
-        data-aos-offset="190"
-        data-aos-duration="700"
-      >
+      <section class="sd-cta" data-reveal>
         <div class="kc-container sd-cta__box">
           <div>
             <h2 class="sd-cta__title">Готовы записаться на приём?</h2>
@@ -378,13 +308,7 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer
-      class="kc-footer"
-      id="contacts"
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-duration="650"
-    >
+    <footer class="kc-footer" id="contacts" data-reveal>
       <div class="kc-footer__waves" aria-hidden="true"></div>
 
       <div class="kc-footer__inner">
@@ -446,18 +370,10 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/reveal.js"></script>
     <script src="js/header.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/forms.js"></script>
     <script src="js/service-detail.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 650,
-        offset: 120,
-        easing: "ease-out-cubic",
-      });
-    </script>
   </body>
 </html>

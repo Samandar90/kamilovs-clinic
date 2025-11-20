@@ -5,12 +5,6 @@
     <title>Услуги — Kamilovs Clinic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- AOS CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-    />
-
     <!-- Общие стили -->
     <link rel="stylesheet" href="css/base.css" />
     <!-- Стили только для страницы услуг -->
@@ -18,7 +12,7 @@
   </head>
   <body>
     <!-- ===== ШАПКА ===== -->
-    <header class="kc-header" data-aos="fade-down" data-aos-duration="700">
+    <header class="kc-header" data-reveal>
       <div class="kc-header__inner">
         <a href="index.html" class="kc-header__brand">
           <img
@@ -63,9 +57,9 @@
         <ul>
           <li><a href="index.html" class="is-active">Главная</a></li>
           <li><a href="#about">О клинике</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#doctors">Врачи</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="services.html" class="is-active">Услуги</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
           <li>
             <a href="tel:+998950884141">Позвонить: +998 95 088 41 41</a>
           </li>
@@ -80,20 +74,9 @@
 
     <!-- ================== ОСНОВНОЙ КОНТЕНТ ================== -->
     <main class="kc-main kc-main--inner">
-      <!-- HERO услуг -->
-
       <!-- Список направлений / услуг -->
-      <section
-        id="services-list"
-        class="kc-services-list"
-        data-aos="fade-up"
-        data-aos-offset="180"
-      >
-        <div
-          class="kc-services-list__head"
-          data-aos="fade-up"
-          data-aos-delay="40"
-        >
+      <section id="services-list" class="kc-services-list" data-reveal>
+        <div class="kc-services-list__head" data-reveal>
           <span class="kc-services-list__kicker">Направления</span>
           <h2 class="kc-services-list__title">Основные услуги клиники</h2>
           <p class="kc-services-list__lead">
@@ -102,17 +85,9 @@
           </p>
         </div>
 
-        <div
-          class="kc-services-list__grid"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+        <div class="kc-services-list__grid" data-reveal>
           <!-- Неврология -->
-          <article
-            class="kc-service-card"
-            data-aos="fade-up"
-            data-aos-delay="80"
-          >
+          <article class="kc-service-card" data-reveal>
             <div class="kc-service-card__top">
               <span class="kc-service-card__tag">Неврология</span>
               <h3 class="kc-service-card__title">Приём невролога</h3>
@@ -135,8 +110,6 @@
               >
                 Записаться
               </button>
-              <!-- ссылка на детальную неврологию -->
-
               <a href="service-detail.html?slug=neuro" class="for-services-btn">
                 Подробнее
               </a>
@@ -144,11 +117,7 @@
           </article>
 
           <!-- Кардиология -->
-          <article
-            class="kc-service-card"
-            data-aos="fade-up"
-            data-aos-delay="140"
-          >
+          <article class="kc-service-card" data-reveal>
             <div class="kc-service-card__top">
               <span class="kc-service-card__tag kc-service-card__tag--red">
                 Кардиология
@@ -173,7 +142,6 @@
               >
                 Записаться
               </button>
-              <!-- ВАЖНО: здесь меняем ?service= на ?slug= -->
               <a
                 href="service-detail.html?slug=cardio"
                 class="for-services-btn"
@@ -184,11 +152,7 @@
           </article>
 
           <!-- Стоматология -->
-          <article
-            class="kc-service-card"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <article class="kc-service-card" data-reveal>
             <div class="kc-service-card__top">
               <span class="kc-service-card__tag kc-service-card__tag--blue">
                 Стоматология
@@ -223,11 +187,7 @@
           </article>
 
           <!-- Педиатрия -->
-          <article
-            class="kc-service-card"
-            data-aos="fade-up"
-            data-aos-delay="260"
-          >
+          <article class="kc-service-card" data-reveal>
             <div class="kc-service-card__top">
               <span class="kc-service-card__tag kc-service-card__tag--green">
                 Педиатрия
@@ -262,11 +222,7 @@
           </article>
 
           <!-- УЗИ -->
-          <article
-            class="kc-service-card"
-            data-aos="fade-up"
-            data-aos-delay="320"
-          >
+          <article class="kc-service-card" data-reveal>
             <div class="kc-service-card__top">
               <span class="kc-service-card__tag kc-service-card__tag--purple">
                 УЗ-диагностика
@@ -301,11 +257,7 @@
           </article>
 
           <!-- Анализы -->
-          <article
-            class="kc-service-card"
-            data-aos="fade-up"
-            data-aos-delay="380"
-          >
+          <article class="kc-service-card" data-reveal>
             <div class="kc-service-card__top">
               <span class="kc-service-card__tag kc-service-card__tag--orange">
                 Анализы
@@ -339,17 +291,9 @@
       </section>
 
       <!-- Мини-блок "Как подготовиться" -->
-      <section
-        class="kc-services-prep"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
+      <section class="kc-services-prep" data-reveal>
         <div class="kc-services-prep__inner">
-          <div
-            class="kc-services-prep__text"
-            data-aos="fade-right"
-            data-aos-delay="60"
-          >
+          <div class="kc-services-prep__text" data-reveal>
             <h2 class="kc-services-prep__title">Как подготовиться к визиту</h2>
             <p class="kc-services-prep__lead">
               Небольшая подготовка помогает сделать приём более информативным и
@@ -363,11 +307,7 @@
             </ul>
           </div>
 
-          <div
-            class="kc-services-prep__card"
-            data-aos="fade-left"
-            data-aos-delay="140"
-          >
+          <div class="kc-services-prep__card" data-reveal>
             <p class="kc-services-prep__card-text">
               Остались вопросы по услугам, анализам или ценам?
               <br />
@@ -383,12 +323,7 @@
     </main>
 
     <!-- ===== ФУТЕР ===== -->
-    <footer
-      class="kc-footer"
-      id="contacts"
-      data-aos="fade-up"
-      data-aos-offset="220"
-    >
+    <footer class="kc-footer" id="contacts" data-reveal>
       <div class="kc-footer__waves" aria-hidden="true"></div>
 
       <div class="kc-footer__inner">
@@ -448,11 +383,12 @@
 
       <button class="kc-to-top" type="button" aria-label="Наверх">↑</button>
     </footer>
+
     <!-- ===== МОДАЛКА "Записаться" ===== -->
     <div class="kc-modal" id="kc-booking-modal" aria-hidden="true">
       <div class="kc-modal__backdrop" data-modal-close></div>
 
-      <div class="kc-modal__dialog" role="dialog" aria-modal="true">
+      <div class="kc-modal__dialog" role="dialog" aria-modal="true" data-reveal>
         <button
           type="button"
           class="kc-modal__close"
@@ -540,18 +476,8 @@
       </div>
     </div>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 700,
-        offset: 120,
-        easing: "ease-out-cubic",
-      });
-    </script>
-
-    <!-- Скрипты такие же, как на главной -->
+    <!-- Скрипты -->
+    <script src="js/reveal.js"></script>
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>

@@ -9,21 +9,10 @@
     <link rel="stylesheet" href="css/base.css" />
     <!-- Стили именно этой страницы -->
     <link rel="stylesheet" href="css/pages/contacts.css" />
-
-    <!-- AOS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-    />
   </head>
   <body>
     <!-- ===== ШАПКА (как на главной) ===== -->
-    <header
-      class="kc-header"
-      data-aos="fade-down"
-      data-aos-duration="700"
-      data-aos-easing="ease-out-cubic"
-    >
+    <header class="kc-header" data-reveal>
       <div class="kc-header__inner">
         <a href="index.html" class="kc-header__brand">
           <img
@@ -69,7 +58,7 @@
           <li><a href="index.html">Главная</a></li>
           <li><a href="services.html">Услуги</a></li>
           <li><a href="doctors.html">Врачи</a></li>
-          <li><a href="#!" class="is-active">Контакты</a></li>
+          <li><a href="contacts.html" class="is-active">Контакты</a></li>
           <li><a href="tel:+998950884141">Позвонить: +998 95 088 41 41</a></li>
           <li>
             <button class="kc-header__mobile-cta" type="button" data-open-modal>
@@ -83,24 +72,12 @@
     <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
     <main class="kc-main kc-main--contacts">
       <!-- HERO / ШАПКА СТРАНИЦЫ -->
-      <section
-        class="kc-contacts-hero"
-        data-aos="fade-up"
-        data-aos-offset="120"
-        data-aos-duration="700"
-      >
+      <section class="kc-contacts-hero" data-reveal>
         <div class="kc-contacts-hero__inner">
           <div class="kc-contacts-hero__layout">
             <!-- Левая половина -->
-            <div
-              class="kc-contacts-hero__left"
-              data-aos="fade-right"
-              data-aos-delay="40"
-              data-aos-duration="650"
-            >
-              <div class="kc-contacts-hero__pill">
-                Контакты клиники
-              </div>
+            <div class="kc-contacts-hero__left" data-reveal>
+              <div class="kc-contacts-hero__pill">Контакты клиники</div>
 
               <h1 class="kc-contacts-hero__title">
                 Всегда на связи, <span>24/7</span>
@@ -118,7 +95,7 @@
                 <span>🕒 Работаем круглосуточно</span>
               </div>
 
-              <div class="kc-contacts-hero__actions">
+              <div class="kc-contacts-hero__actions" data-reveal>
                 <a
                   href="tel:+998950884141"
                   class="kc-contacts-hero__btn kc-contacts-hero__btn--primary"
@@ -136,19 +113,12 @@
             </div>
 
             <!-- Правая половина — премиальная карточка -->
-            <aside
-              class="kc-contacts-hero__card"
-              data-aos="fade-left"
-              data-aos-delay="80"
-              data-aos-duration="650"
-            >
-              <div class="kc-contacts-hero__card-badge">
-                🩺 Быстрая запись
-              </div>
+            <aside class="kc-contacts-hero__card" data-reveal>
+              <div class="kc-contacts-hero__card-badge">🩺 Быстрая запись</div>
               <h2>Нужна помощь сейчас?</h2>
               <p>
-                Оставьте заявку или позвоните — администратор подскажет, к какому
-                врачу лучше обратиться и когда можно прийти.
+                Оставьте заявку или позвоните — администратор подскажет, к
+                какому врачу лучше обратиться и когда можно прийти.
               </p>
 
               <ul class="kc-contacts-hero__card-list">
@@ -175,20 +145,10 @@
       </section>
 
       <!-- БЛОК: КОНТАКТЫ + КАРТА -->
-      <section
-        class="kc-contacts-main"
-        data-aos="fade-up"
-        data-aos-offset="140"
-        data-aos-duration="650"
-      >
+      <section class="kc-contacts-main" data-reveal>
         <div class="kc-contacts-main__inner">
           <!-- Левая колонка: текстовые контакты -->
-          <div
-            class="kc-contacts-info"
-            data-aos="fade-right"
-            data-aos-delay="40"
-            data-aos-duration="600"
-          >
+          <div class="kc-contacts-info" data-reveal>
             <h2 class="kc-contacts-info__title">Как с нами связаться</h2>
             <p class="kc-contacts-info__text">
               Вы можете записаться на приём по телефону, через сайт или
@@ -197,12 +157,7 @@
             </p>
 
             <div class="kc-contacts-grid">
-              <article
-                class="kc-contacts-card"
-                data-aos="fade-up"
-                data-aos-delay="40"
-                data-aos-duration="550"
-              >
+              <article class="kc-contacts-card" data-reveal>
                 <h3>📍 Адрес клиники</h3>
                 <p>
                   Ташкент, ул. Хувайдо, 7<br />
@@ -210,12 +165,7 @@
                 </p>
               </article>
 
-              <article
-                class="kc-contacts-card"
-                data-aos="fade-up"
-                data-aos-delay="90"
-                data-aos-duration="550"
-              >
+              <article class="kc-contacts-card" data-reveal>
                 <h3>📞 Телефон и мессенджеры</h3>
                 <p>
                   Телефон:
@@ -224,12 +174,7 @@
                 </p>
               </article>
 
-              <article
-                class="kc-contacts-card"
-                data-aos="fade-up"
-                data-aos-delay="140"
-                data-aos-duration="550"
-              >
+              <article class="kc-contacts-card" data-reveal>
                 <h3>🕒 Режим работы</h3>
                 <p>
                   Приём пациентов: <strong>24/7</strong><br />
@@ -237,12 +182,7 @@
                 </p>
               </article>
 
-              <article
-                class="kc-contacts-card"
-                data-aos="fade-up"
-                data-aos-delay="190"
-                data-aos-duration="550"
-              >
+              <article class="kc-contacts-card" data-reveal>
                 <h3>✉️ Электронная почта</h3>
                 <p>
                   По общим вопросам:
@@ -251,24 +191,14 @@
               </article>
             </div>
 
-            <div
-              class="kc-contacts-highlight"
-              data-aos="fade-up"
-              data-aos-delay="230"
-              data-aos-duration="550"
-            >
+            <div class="kc-contacts-highlight" data-reveal>
               Если состояние острое или вам плохо — лучше сразу позвонить в
               клинику, чем заполнять форму. Так мы быстрее среагируем.
             </div>
           </div>
 
           <!-- Правая колонка: карта -->
-          <div
-            class="kc-contacts-map"
-            data-aos="fade-left"
-            data-aos-delay="70"
-            data-aos-duration="600"
-          >
+          <div class="kc-contacts-map" data-reveal>
             <div class="kc-contacts-map__head">
               <h2>Мы на карте</h2>
               <p>Постройте маршрут до Kamilovs Clinic за пару секунд.</p>
@@ -290,19 +220,9 @@
       </section>
 
       <!-- БЛОК: ФОРМА ОБРАТНОЙ СВЯЗИ / ЗАПИСИ -->
-      <section
-        class="kc-contacts-form"
-        data-aos="fade-up"
-        data-aos-offset="150"
-        data-aos-duration="650"
-      >
+      <section class="kc-contacts-form" data-reveal>
         <div class="kc-contacts-form__inner">
-          <div
-            class="kc-contacts-form__head"
-            data-aos="fade-up"
-            data-aos-delay="40"
-            data-aos-duration="600"
-          >
+          <div class="kc-contacts-form__head" data-reveal>
             <h2>Оставить заявку онлайн</h2>
             <p>
               Заполните форму — администратор свяжется с вами, уточнит детали и
@@ -319,9 +239,7 @@
             class="kc-contacts-form__body"
             id="kc-contacts-form"
             autocomplete="off"
-            data-aos="fade-up"
-            data-aos-delay="80"
-            data-aos-duration="600"
+            data-reveal
           >
             <div class="kc-contacts-form__row">
               <div class="kc-field">
@@ -402,13 +320,7 @@
     </main>
 
     <!-- ===== FOOTER (как на главной) ===== -->
-    <footer
-      class="kc-footer"
-      id="contacts"
-      data-aos="fade-up"
-      data-aos-offset="160"
-      data-aos-duration="650"
-    >
+    <footer class="kc-footer" id="contacts" data-reveal>
       <div class="kc-footer__waves" aria-hidden="true"></div>
 
       <div class="kc-footer__inner">
@@ -422,8 +334,8 @@
           </div>
 
           <p class="kc-footer__text">
-            Современная многопрофильная клиника в центре Ташкента. Работаем
-            24/7 — рядом, когда это важно.
+            Современная многопрофильная клиника в центре Ташкента. Работаем 24/7
+            — рядом, когда это важно.
           </p>
 
           <ul class="kc-footer__list">
@@ -467,14 +379,7 @@
     <div class="kc-modal" id="kc-booking-modal" aria-hidden="true">
       <div class="kc-modal__backdrop" data-modal-close></div>
 
-      <div
-        class="kc-modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-easing="ease-out-cubic"
-      >
+      <div class="kc-modal__dialog" role="dialog" aria-modal="true" data-reveal>
         <button
           type="button"
           class="kc-modal__close"
@@ -563,18 +468,10 @@
     </div>
 
     <!-- Скрипты -->
+    <script src="js/reveal.js"></script>
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/forms.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 650,
-        offset: 120,
-        easing: "ease-out-cubic",
-      });
-    </script>
   </body>
 </html>
