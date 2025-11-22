@@ -680,17 +680,18 @@ body {
 
 /* ===== SAFE REVEAL ANIMATION ===== */
 
-/* Элемент до появления */
+/* Базовый reveal — ВСЁ ВСЕГДА ВИДНО, даже если JS не сработал */
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  opacity: 1; /* раньше было 0 — из-за этого был белый экран */
+  transform: translate3d(0, 16px, 0);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  will-change: opacity, transform;
 }
 
-/* Когда попал в зону видимости (класс .is-in добавляет reveal.js) */
+/* Когда JS добавляет класс .is-in — лёгкий подъём вверх */
 [data-reveal].is-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* ===========================
